@@ -18,13 +18,6 @@ export const styles = () => ({
     margin-bottom: 0.5rem;
     color: #666e75;
     font-size: 16px;
-    //max-width: 500px;
-  `,
-  loaderWrapper: css`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
   `,
   titleSearch: css`
     font-weight: 500;

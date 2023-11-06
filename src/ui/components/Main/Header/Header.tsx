@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { logo } from '../../../../assets';
 import { styles } from './Header.styles.ts';
-// import { Button } from '@mui/material';
 
 export const Header = () => {
   const classes = styles();

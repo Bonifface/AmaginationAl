@@ -10,7 +10,6 @@ export const styles = () => ({
     padding: 0 20px;
     background-color: white;
     border-bottom: 1px solid rgba(0,0,0,.05);
-    
   `,
   img: css`
     width: 90px;

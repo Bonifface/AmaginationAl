@@ -1,7 +1,7 @@
 import { Header } from "./Main/Header/Header.tsx";
 import { Main } from "./Main/Main/Main.tsx";
 
-export function App() {
+export const App = () => {
   return (
     <>
       <Header />

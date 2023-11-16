@@ -3,9 +3,6 @@ import { css } from "@emotion/react";
 export const styles = () => ({
   container: css`
     position: relative;
-    //width: 100%;
-    //height: 100%;
-    //display: grid;
     grid-column: auto/span 2;
     grid-row: auto/span 2;
   `,
@@ -13,9 +10,6 @@ export const styles = () => ({
     position: relative;
     max-width: 300px;
     max-height: 300px;
-    //width: 100%;
-    //height: 100%;
-    //display: grid;
   `,
 
   img: css`
@@ -27,9 +21,6 @@ export const styles = () => ({
     position: absolute;
     top: 0;
     left: 0;
-    //display: flex;
-    //flex-direction: column;
-    //justify-content: space-evenly;
     height: 100%;
     width: 100%;
     opacity: 0;

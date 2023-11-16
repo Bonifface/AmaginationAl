@@ -1,4 +1,6 @@
 import React from "react";
+import {styles} from './FormField.styles.ts';
+
 interface FormType
   extends React.DetailedHTMLProps<
     React.InputHTMLAttributes<HTMLInputElement>,
@@ -14,8 +16,11 @@ export const FormField = ({
   isSurpriseMe,
   handleSurpriseMe,
   ...props
-}: FormType) => (
-  <div>
+}: FormType) => {
+  const classes = styles();
+
+  return(
+    <div css={classes.container}>
     <div>
       <label htmlFor={props.name}>{labelName}</label>
       {isSurpriseMe && (
@@ -24,6 +29,6 @@ export const FormField = ({
         </button>
       )}
     </div>
-    <input {...props} />
+    <input css={classes.input} {...props} />
   </div>
-);
+);}

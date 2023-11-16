@@ -3,9 +3,11 @@ import { Routes, Route } from "react-router-dom";
 import { CreatePost } from "./CreatePost/CreatePost.tsx";
 import { Home } from "./Home/Home.tsx";
 
+
 export const Main = () => {
 
   const classes = styles();
+
   return (
     <div css={classes.container}>
       <Routes>

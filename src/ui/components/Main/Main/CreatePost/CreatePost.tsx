@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { preview } from "../../../../../assets";
 import { getRandomPrompt } from "../../../utils/getRandomPrompt.ts";
 import {
-  // useAppSelector,
+  useAppSelector,
   useAppDispatch,
 } from "../../../../../../../table-test/src/store/reduxHooks.ts";
 import { FormField } from "../FormField/FormField.tsx";
@@ -14,7 +14,8 @@ import { createImg } from "../../../../../store/rootReducer.ts";
 
 export const CreatePost = () => {
   const navigate = useNavigate();
-  // const state = useAppSelector((state) => state.posts);
+  const posts = useAppSelector((state) => state.posts);
+  console.log(posts);
   const dispatch = useAppDispatch();
 
   const [form, setForm] = useState({
@@ -29,8 +30,8 @@ export const CreatePost = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
-  const onCLick = () => {
-    dispatch(createImg({ id: "sd", image: "lol", prompt: "crate img" }));
+  const onCLick = (e: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch(createImg({ image: "lol", prompt: "crate img" }));
   };
   const handleSurpriseMe = () => {
     const randomPrompt = getRandomPrompt(form.prompt);

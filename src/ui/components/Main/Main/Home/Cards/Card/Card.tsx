@@ -10,6 +10,8 @@ interface CardProps {
   photo: string;
   index: number;
 }
+
+console.log('test git');
 export const Card = ({ _id, name, prompt, photo, index }: CardProps) => {
   const classes = styles();
   const [ref, inView] = useInView({
